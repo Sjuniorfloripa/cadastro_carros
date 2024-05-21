@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <style>
+        input[type=submit]{
+            margin: 4px;
+            cursor: pointer;
+            background-color: #0096c7;
+            border: none;
+            color: white;
+            padding: 15px 15px;
+            border-radius: 4px;
+        }
+    </style>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ login_form.as_table }}
+        </table>
+        <input type="submit" value="Entrar">
+    </form>
+{% endblock %}
